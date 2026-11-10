@@ -1,79 +1,37 @@
+// ~/.config/fastfetch/config.jsonc
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+  "logo": {
+    "type": "builtin",
+    "source": "arch",
+    "padding": { "top": 1, "left": 4, "right": 6 }
+  },
+
+  "display": {
+    "separator": "  "
+  },
+
   "modules": [
-	    "title",
-	    "separator",
-	    {
-		    "type": "os",
-		    "key": "󰣇 ",
-		    "keyColor": "cyan"
-	    },
-	    {
-		    "type": "kernel",
-		    "key": " ",
-		    "keyColor": "cyan"
-	    },
-	    {
-		    "type": "uptime",
-		    "key": " ",
-		    "keyColor": "cyan"
-	    },
-	    {
-		    "type": "packages",
-		    "key": "󰮯 ",
-		    "keyColor": "cyan"
-	    },
-	    {
-		    "type": "terminal",
-		    "key": " ",
-		    "keyColor": "cyan"
-	    },
-	    {
-		    "type": "host",
-		    "key": " ",
-		    "keyColor": "magenta"
-	    },
-	    {
-		    "type": "cpu",
-		    "key": " ",
-		    "keyColor": "magenta"
-	    },
-	    {
-		    "type": "gpu",
-		    "key": " ",
-		    "keyColor": "magenta"
-	    },
-	    {
-		    "type": "memory",
-		    "key": " ",
-		    "keyColor": "magenta"
-	    },
-	    {
-		    "type": "disk",
-		    "key": " ",
-		    "keyColor": "magenta"
-	    },
-	    {
-		    "type": "battery",
-		    "key": " ",
-		    "keyColor": "green"
-	    },
-	    {
-		    "type": "poweradapter",
-		    "key":"󱐥 ",
-		    "keyColor": "green"
-	    },
-/*	    {
-		    "type": "localip",
-		    "key": "󱦂 ",
-		    "keyColor": "blue"
-	    },
-	    {
-		    "type": "publicip",
-		    "key": " ",
-		    "keyColor": "blue"
-	    },*/
-    "break",
-    "colors"
+    { "type": "custom",		"key": "╭────────────╮", "format": "" },
+    { "type": "title",		"key": "│   user    │", "format": "{user-name}" },
+    { "type": "packages",	"key": "│ 󰮯  packages│", "format": "{pacman} (pacman), {flatpak-all} (flatpak)" }, 
+    { "type": "os",		"key": "│ 󰣇  distro  │", "format": "{pretty-name} {arch}" },
+    { "type": "kernel",		"key": "│   kernel  │" },
+    { "type": "host",		"key": "│   host    │" },
+    { "type": "terminal",	"key": "│   term    │" },
+    { "type": "shell",		"key": "│   shell   │" },
+    { "type": "cpu",		"key": "│   cpu     │" },
+    { "type": "gpu",		"key": "│   gpu     │", "format": "{name}" },
+    { "type": "memory",		"key": "│   ram     │" },
+    { "type": "disk",		"key": "│   disk    │", "folders": "/" },
+    { "type": "battery",	"key": "│   battery │" },
+    { "type": "poweradapter",	"key": "│ 󱐥  power   │" },
+    { "type": "localip",  	"key": "│ 󱦂  local   │" },
+    { "type": "publicip", 	"key": "│   public  │" },
+    { "type": "uptime",   	"key": "│ 󰔛  uptime  │" },
+    { "type": "custom", 	"key": "│            │", "format": "" },
+    { "type": "colors", 	"key": "│   colors  │", "symbol": "circle", "block": { "width": 1 } },
+    { "type": "custom", 	"key": "╰────────────╯", "format": "" }
   ]
 }
