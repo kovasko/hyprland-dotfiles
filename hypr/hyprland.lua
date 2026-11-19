@@ -1,4 +1,4 @@
-------------------
+-------------------
 ---- MONITORS ----
 ------------------
 
@@ -328,11 +328,6 @@ hl.window_rule({
 --Set Blur and Opacity for apps
 
 hl.layer_rule({ match = { namespace = "rofi" }, blur = true })
---hl.layer_rule({ match = { namespace = "swaync" }, blur = true })
 
-
-hl.window_rule({match = { class = "kitty" }, opacity = "0.9" ,})
 hl.window_rule({match = { class = "waybar" }, opacity = "0.7" ,})
 hl.window_rule({match = { class = "thunar" }, opacity = "0.9" ,})
---hl.window_rule({match = { class = "firefox" }, opacity = "1" ,})
---hl.window_rule({match = { namespace = "blueberry" }, opacity = "0.9" ,})
